@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Calender" customModule="School" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="QsL-n7-eQK" id="O2M-CO-ktd"/>
+                <outlet property="subjectPeriodRoller" destination="gke-0X-BqN" id="JMB-Ts-rwb"/>
+                <outlet property="texView" destination="dWf-5r-8c5" id="Png-SZ-EdP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rih-JD-Eau">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Calender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-Ei-7kI">
+                            <rect key="frame" x="8" y="12" width="359" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QsL-n7-eQK">
+                            <rect key="frame" x="8" y="65" width="354" height="216"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="216" id="c2f-Rc-OyQ"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="503727039.12729901">
+                                <!--2016-12-18 04:10:39 +0000-->
+                            </date>
+                            <connections>
+                                <action selector="datePickerValueChanged" destination="-1" eventType="valueChanged" id="tfo-K2-SLh"/>
+                            </connections>
+                        </datePicker>
+                        <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gke-0X-BqN">
+                            <rect key="frame" x="0.0" y="289" width="375" height="143"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="143" id="asm-N2-VLo"/>
+                                <constraint firstAttribute="width" constant="375" id="w3z-pf-250"/>
+                            </constraints>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPH-Vm-CXa">
+                            <rect key="frame" x="129" y="440" width="117" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Write for this day">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="writeForDayWithButton:" destination="-1" eventType="touchUpInside" id="fU3-V1-ATy"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWf-5r-8c5">
+                            <rect key="frame" x="8" y="478" width="359" height="137"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1072375476" green="0.70245385169999996" blue="0.83325147629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QsL-n7-eQK" secondAttribute="trailing" constant="13" id="6sJ-aq-AJZ"/>
+                        <constraint firstItem="dBC-Ei-7kI" firstAttribute="top" secondItem="rih-JD-Eau" secondAttribute="top" constant="12" id="8Ql-yr-yh9"/>
+                        <constraint firstItem="gke-0X-BqN" firstAttribute="leading" secondItem="rih-JD-Eau" secondAttribute="leading" id="EYO-og-Nar"/>
+                        <constraint firstAttribute="trailing" secondItem="dBC-Ei-7kI" secondAttribute="trailing" constant="8" id="M85-Rj-Arr"/>
+                        <constraint firstItem="QsL-n7-eQK" firstAttribute="top" secondItem="dBC-Ei-7kI" secondAttribute="bottom" constant="32" id="OaU-JP-wHD"/>
+                        <constraint firstItem="gke-0X-BqN" firstAttribute="top" secondItem="QsL-n7-eQK" secondAttribute="bottom" constant="8" id="UdD-ae-prp"/>
+                        <constraint firstAttribute="trailing" secondItem="gke-0X-BqN" secondAttribute="trailing" id="gCd-4r-ox2"/>
+                        <constraint firstItem="dBC-Ei-7kI" firstAttribute="leading" secondItem="rih-JD-Eau" secondAttribute="leading" constant="8" id="kft-vs-Tcb"/>
+                        <constraint firstItem="QsL-n7-eQK" firstAttribute="leading" secondItem="rih-JD-Eau" secondAttribute="leading" constant="8" id="sja-Ab-5hI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rih-JD-Eau" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="83b-NU-D4W"/>
+                <constraint firstItem="rih-JD-Eau" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nja-6D-cib"/>
+                <constraint firstAttribute="bottom" secondItem="rih-JD-Eau" secondAttribute="bottom" id="oXn-bA-qR6"/>
+            </constraints>
+            <point key="canvasLocation" x="55.5" y="59.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--What Subjects Do You Teach View Controller-->
+        <scene sceneID="S0b-nh-1Yg">
+            <objects>
+                <viewController storyboardIdentifier="TeacherView" id="04m-RI-qmp" customClass="WhatSubjectsDoYouTeachViewController" customModule="school" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9me-Pg-z9j"/>
+                        <viewControllerLayoutGuide type="bottom" id="0oR-ll-v4f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CfB-qK-BFU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BLk-C4-opi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="388"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="388" id="VGV-aa-OJb"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="8" indentationWidth="10" reuseIdentifier="cell1" id="akz-Gr-x9g" customClass="TableViewCell" customModule="school" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="akz-Gr-x9g" id="Ghu-4a-KGF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Period" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idq-Mx-Evm">
+                                                    <rect key="frame" x="270" y="6" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="done"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQM-yP-Zy6">
+                                                    <rect key="frame" x="8" y="6" width="175" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="period" destination="Idq-Mx-Evm" id="Ghk-et-OZS"/>
+                                            <outlet property="subject" destination="HQM-yP-Zy6" id="6tY-0E-uHT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpu-pC-Jxd">
+                                <rect key="frame" x="164" y="566" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="VvW-t1-isp"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneWithButton:" destination="04m-RI-qmp" eventType="touchUpInside" id="HFf-FO-0Lv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJ8-u4-5aM">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29844802970000001" green="0.62806490380000002" blue="0.35273365680000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nJ8-u4-5aM" firstAttribute="trailing" secondItem="CfB-qK-BFU" secondAttribute="trailingMargin" id="0CA-NR-SuD"/>
+                            <constraint firstItem="BLk-C4-opi" firstAttribute="top" secondItem="nJ8-u4-5aM" secondAttribute="bottom" constant="14" id="NHG-hQ-X9w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jpu-pC-Jxd" secondAttribute="trailing" constant="149" id="RxQ-5K-16f"/>
+                            <constraint firstItem="0oR-ll-v4f" firstAttribute="top" secondItem="Jpu-pC-Jxd" secondAttribute="bottom" constant="71" id="SP1-fG-cvE"/>
+                            <constraint firstItem="nJ8-u4-5aM" firstAttribute="top" secondItem="9me-Pg-z9j" secondAttribute="bottom" id="as4-pJ-abV"/>
+                            <constraint firstItem="Jpu-pC-Jxd" firstAttribute="leading" secondItem="CfB-qK-BFU" secondAttribute="leadingMargin" constant="148" id="bug-nh-jxl"/>
+                            <constraint firstItem="nJ8-u4-5aM" firstAttribute="leading" secondItem="CfB-qK-BFU" secondAttribute="leadingMargin" id="dNy-hG-pe8"/>
+                            <constraint firstAttribute="trailing" secondItem="BLk-C4-opi" secondAttribute="trailing" id="ghZ-sj-z6h"/>
+                            <constraint firstItem="BLk-C4-opi" firstAttribute="leading" secondItem="CfB-qK-BFU" secondAttribute="leading" id="ool-IU-2rS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="BLk-C4-opi" id="gZc-nu-vpa"/>
+                        <outlet property="teacherName" destination="nJ8-u4-5aM" id="s8Z-J8-vRr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htn-hc-cTu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312.80000000000001" y="215.44227886056973"/>
+        </scene>
+    </scenes>
+</document>
